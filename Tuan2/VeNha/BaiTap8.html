@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Bài Tập 8 - HTML4 → HTML5</title>
+<style>
+	*:hover { outline: 5px solid rgb(255,0,0); }
+
+	section, header, hgroup, footer, nav, article, aside, figure, figcaption {
+  		border: 1px solid rgb(255,255,255);
+  		background-color: rgba(153,153,153,.25);
+  		display: block;
+  		padding: 5px;
+  		margin: 5px;
+  	}
+  	
+  	section, aside {
+  		float: left;
+  	}
+  	
+  	header, footer {
+  		clear: both;
+  	}
+  	
+  	#pagecontent {
+  		margin: 0 auto;
+  		max-width: 1045px;
+  		min-width: 480px;
+  		width: 100%;
+  	}
+  	
+  	#pageheader, #pagefooter { 
+  		max-width: 1020px;
+  		min-width: 480px;
+  		width: 100%;
+  	}
+  	#sectioncontent1 {
+  		max-width: 600px;
+  		min-width: 400px;
+  		width: 100%;
+  	}
+  	
+  	#asidecontent1 {
+  		max-width: 400px;
+  		width: 100%;
+  	}
+
+  	img { width: 100%; height: auto; }
+    /* cho width tính luôn padding/border */
+#sectioncontent1, #asidecontent1 { box-sizing: border-box; }
+
+/* chia 2 cột bằng % để luôn vừa mọi màn hình */
+#sectioncontent1{
+  float: left;
+  width: 62%;           /* cột trái */
+  min-width: 320px;     /* để không quá nhỏ */
+  max-width: none;      /* bỏ max cứng 600 */
+}
+
+#asidecontent1{
+  float: left;
+  width: 36%;           /* cột phải */
+  min-width: 260px;
+  max-width: none;      /* bỏ max cứng 400 */
+}
+
+/* ảnh không tràn khung */
+img{max-width:100%; height:auto; display:block;}
+/* body mặc định có margin 8px -> bỏ để khỏi hụt bề ngang */
+body{margin:0;}
+/* clear float an toàn cho container */
+#pagecontent::after{content:""; display:block; clear:both;}
+
+</style>
+</head>
+<body>
+
+<main id="pagecontent">
+
+	<!-- HEADER -->
+    <header id="pageheader">
+        <hgroup id="pagehgroup">
+            <h1 class="sitename">
+				<img src="https://bit.ueh.edu.vn/wp-content/uploads/2017/06/BIT_logo.png" alt="Logo BIT UEH" style="width:80px; vertical-align:middle;">
+				Khoa Công Nghệ Thông Tin Kinh Doanh (BIT - UEH)
+			</h1>
+            <h2 class="subtitle">HTML5 Layout Example</h2>
+        </hgroup>
+
+        <nav id="globalnav">
+            <p>
+				<a href="#">Trang chủ</a> |
+				<a href="#">CT Liên thông Đại học</a> |
+				<a href="#">Chương trình sau Đại học</a> |
+				<a href="#">Chương trình quốc tế</a>
+			</p>
+        </nav>
+    </header>
+
+	<!-- SECTION TRÁI -->
+    <section id="sectioncontent1">
+        <header id="sectionheader1">
+            <h2>Chương trình Đại học</h2>
+        </header>
+
+        <article id="articlecontent1">
+            <header id="articleheader1">
+                <h3>Hệ thống hoạch định nguồn lực doanh nghiệp (ERP)</h3>
+            </header>
+
+            <p>
+				Ngành ERP cung cấp kiến thức về quản lý, điều hành và tích hợp hệ thống trong doanh nghiệp.
+				Sinh viên học cách vận hành các mô hình quản trị hiện đại thông qua phần mềm ERP thực tế.
+			</p>
+
+            <figure id="figure1">
+                <img src="https://bit.ueh.edu.vn/wp-content/uploads/2017/06/mis-770x385.jpg" alt="ERP">
+                <figcaption>Minh họa ERP</figcaption>
+            </figure>
+
+            <footer id="articlefooter1">
+                <p>Article Footer</p>
+            </footer>
+        </article>
+
+        <article>
+            <header id="articleheader2">
+                <h3>Ngành Thương mại điện tử</h3>
+            </header>
+            <p>
+				Đào tạo sinh viên kiến thức về marketing số, thanh toán điện tử, quản lý gian hàng trực tuyến
+				và phân tích dữ liệu khách hàng để vận hành mô hình kinh doanh online hiệu quả.
+			</p>
+            <figure id="figure2">
+                <img src="https://bit.ueh.edu.vn/wp-content/uploads/2017/06/e-commerce-770x385.jpg" alt="Thương mại điện tử">
+                <figcaption>Minh họa TMĐT</figcaption>
+            </figure>
+            <footer id="articlefooter2">
+                <p>Article Footer</p>
+            </footer>
+        </article>
+
+        <footer id="sectionfooter1">
+            <p>Section Footer</p>
+        </footer>
+    </section>
+
+	<!-- ASIDE PHẢI -->
+    <aside id="asidecontent1">
+        <header class="sectionheader">
+            <h2>Liên kết</h2>
+        </header>
+
+        <article>
+            <header><h3>Hệ thống thông tin kinh doanh</h3></header>
+            <p>
+				Tập trung đào tạo kỹ năng phân tích dữ liệu, lập trình hệ thống và hỗ trợ ra quyết định
+				cho doanh nghiệp thông qua ứng dụng công nghệ.
+			</p>
+            <figure>
+                <img src="https://bit.ueh.edu.vn/wp-content/uploads/2017/06/mis-331x197.jpg" alt="Hệ thống thông tin kinh doanh">
+                <figcaption>Minh họa HTTT Kinh doanh</figcaption>
+            </figure>
+            <footer><p>Aside Article Footer</p></footer>
+        </article>
+
+        <article>
+            <header><h3>Công nghệ phần mềm</h3></header>
+            <p>
+				Chuyên ngành đào tạo lập trình viên, kỹ sư phần mềm có khả năng thiết kế,
+				phát triển và kiểm thử các ứng dụng hiện đại.
+			</p>
+            <figure>
+                <img src="https://bit.ueh.edu.vn/wp-content/uploads/2024/02/CNTT-1536x745-1-331x197.png" alt="Công nghệ phần mềm">
+                <figcaption>Minh họa Công nghệ phần mềm</figcaption>
+            </figure>
+            <footer><p>Aside Article Footer</p></footer>
+        </article>
+
+        <footer><p>Aside Footer</p></footer>
+    </aside>
+
+	<!-- PAGE FOOTER -->
+    <footer id="pagefooter">
+        <p>Page Footer - © 2025 BIT UEH</p>
+    </footer>
+
+</main>
+
+</body>
+</html>

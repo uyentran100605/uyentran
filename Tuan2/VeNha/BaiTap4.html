@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài Tập 4</title>
+  <style>
+    :root { --text:#0f172a; --muted:#475569; --border:#e2e8f0; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif; margin: 24px; color: var(--text);
+      background:#fff;
+    }
+    .wrap { max-width: 560px; margin: 0 auto; }
+    .card {
+      border: 1px solid var(--border); border-radius: 10px;
+      overflow: hidden; background:#fff; margin-bottom: 20px;
+    }
+    .card a.img { display:block; }
+    .card img { width:100%; display:block; }
+    .card .content { padding: 12px 14px 16px; }
+    .card h3 {
+      margin: 8px 0 6px; font-size: 20px; line-height:1.3;
+    }
+    .card h3 a {
+      color: inherit; text-decoration: none;
+    }
+    .card p {
+      margin: 0; color: var(--muted); line-height:1.55;
+      display:-webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;
+      overflow: hidden; /* tạo hiệu ứng cắt “…“ */
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- CARD 1 -->
+    <article class="card">
+      <!-- Ảnh có thể click -->
+      <a class="img" href="https://bit.ueh.edu.vn/dao-tao" target="_blank" rel="noopener">
+        <img src="https://bit.ueh.edu.vn/wp-content/uploads/2017/06/bit-300x150.jpg" alt="Công nghệ Phần mềm">
+      </a>
+      <div class="content">
+        <h3>
+          <a href="https://bit.ueh.edu.vn/dao-tao" target="_blank" rel="noopener">
+            Công nghệ Phần mềm
+          </a>
+        </h3>
+        <p>
+          Chương trình Kỹ thuật phần mềm đào tạo cử nhân nắm vững kiến thức cơ bản và chuyên môn; 
+          có khả năng tổ chức thực hiện nhiệm vụ trong phạm vi quyền hạn của một chuyên viên hoặc 
+          quản lý trong lĩnh vực công nghệ phần mềm như nắm bắt và phân tích nhu cầu thực tế 
+          (phân tích hệ thống, lập kế hoạch dự án phần mềm, phân tích yêu cầu), phát triển phần mềm 
+          (thiết kế phần mềm, lập trình, kiểm thử),… Bên cạnh đó, sinh viên luôn được trao dồi kiến thức 
+          chuyên môn, nâng cao tay nghề, đồng thời được liên kết chặt chẽ với nhiều tổ chức, 
+          doanh nghiệp liên quan nhằm bám sát thực tế, liên tục cập nhật các chuẩn, 
+          công nghệ mới nhất để nâng cao chất lượng, tăng khả năng cạnh tranh và hội nhập, 
+          đồng thời đáp ứng một cách tốt nhất nhu cầu ngày càng cao của xã hội.
+        </p>
+      </div>
+    </article>
+
+    <!-- CARD 2 -->
+    <article class="card">
+      <a class="img" href="https://bit.ueh.edu.vn/dao-tao" target="_blank" rel="noopener">
+        <img src="https://bit.ueh.edu.vn/wp-content/uploads/2017/06/e-commerce-300x150.jpg" alt="Ngành Thương mại điện tử">
+      </a>
+      <div class="content">
+        <h3>
+          <a href="https://bit.ueh.edu.vn/dao-tao" target="_blank" rel="noopener">
+            Ngành Thương mại điện tử
+          </a>
+        </h3>
+        <p>
+          Chương trình đào tạo Thương mại điện tử (TMĐT) tại UEH được xây dựng 
+          theo chuẩn tiên tiến quốc tế với mục tiêu đào tạo cử nhân ngành TMĐT 
+          có kiến thức toàn diện về TMĐT, có chuyên môn, năng lực và kỹ năng 
+          nghề nghiệp vững vàng, cung cấp nguồn nhân lực chất lượng cao đáp ứng 
+          nhu cầu phát triển kinh tế và xã hội trong thời đại mới.
+        </p>
+      </div>
+    </article>
+
+  </div>
+</body>
+</html>

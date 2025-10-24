@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài Tập 7</title>
+  <style>
+    body { font-family: time new roman, time new roman; margin: 40px; }
+
+    /* Tạo “viền đôi mảnh” tổng thể + viền ô bên trong */
+    table{
+      border-collapse: separate;   /* để tách viền, tạo cảm giác 2 lớp */
+      border-spacing: 0;           /* sát nhau */
+      margin: 0 auto;              /* căn giữa bảng */
+      width: 520px;                /* tùy chỉnh cho cân ảnh mẫu */
+      border: 1px solid #9e9e9e;   /* viền ngoài lớp 1 */
+      outline: 1px solid #9e9e9e;  /* viền ngoài lớp 2 (tạo cảm giác “đôi”) */
+    }
+
+    th, td{
+      border: 1px solid #9e9e9e;   /* viền các ô bên trong */
+      padding: 8px 12px;
+      text-align: center;
+    }
+
+    /* Hàng tiêu đề to (gộp 2 cột), xanh + gạch chân */
+    .main-title{
+      color: blue;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    /* Hàng tiêu đề cột nhỏ */
+    .sub-title{ font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <table>
+    <!-- Dòng tiêu đề lớn gộp 2 cột -->
+    <tr>
+      <th colspan="2" class="main-title">Mạng nghệ thuật &amp; giải trí</th>
+    </tr>
+
+    <!-- Dòng tiêu đề cột -->
+    <tr>
+      <th class="sub-title">Phim</th>
+      <th class="sub-title">Ngày chiếu</th>
+    </tr>
+
+    <!-- Dữ liệu -->
+    <tr>
+      <td>Sherlock Holmes</td>
+      <td>Thứ hai</td>
+    </tr>
+    <tr>
+      <td>Lovejoy</td>
+      <td>Thứ hai</td>
+    </tr>
+  </table>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài Tập 5</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8fafc;
+      margin: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #0f172a;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #fff;
+      width: 280px;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 12px 16px 20px;
+    }
+
+    .card-content h3 {
+      margin: 8px 0;
+      font-size: 18px;
+    }
+
+    .card-content h3 a {
+      text-decoration: none;
+      color: #0f172a;
+    }
+
+    .card-content h3 a:hover {
+      color: #2563eb;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      color: #475569;
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <h2>Các chuyên ngành đào tạo - Khoa CNTT Kinh doanh (BIT - UEH)</h2>
+
+  <div class="container">
+
+    <div class="card">
+      <a href="https://bit.ueh.edu.vn/cong-nghe-phan-mem" target="_blank">
+        <img src="https://bit.ueh.edu.vn/wp-content/uploads/2017/06/bit-770x385.jpg" alt="Công nghệ Phần mềm">
+      </a>
+      <div class="card-content">
+        <h3>
+          <a href="https://bit.ueh.edu.vn/cong-nghe-phan-mem" target="_blank">
+            Công nghệ Phần mềm
+          </a>
+        </h3>
+        <p>
+          Nhu cầu xã hội Cách mạng công nghiệp 4.0 giúp công nghệ thông tin và viễn thông (ICT)
+          xâm nhập mọi mặt đời sống kinh tế xã hội. ICT vì thế mà dần trở thành một trong những
+          mũi nhọn chiến lược...
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="https://bit.ueh.edu.vn/chuyen-nganh-thuong-mai-dien-tu" target="_blank">
+        <img src="https://bit.ueh.edu.vn/wp-content/uploads/2017/06/e-commerce-770x385.jpg" alt="Ngành Thương mại điện tử">
+      </a>
+      <div class="card-content">
+        <h3>
+          <a href="https://bit.ueh.edu.vn/chuyen-nganh-thuong-mai-dien-tu" target="_blank">
+            Ngành Thương mại điện tử
+          </a>
+        </h3>
+        <p>
+          Nhu cầu xã hội Ngành Thương mại điện tử (TMĐT) tại Việt Nam hiện nay đang có những
+          bước tăng trưởng mạnh mẽ, tạo cơ hội nghề nghiệp rộng mở cho sinh viên tốt nghiệp...
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="https://bit.ueh.edu.vn/nganh-he-thong-thong-tin-quan-ly" target="_blank">
+        <img src="https://bit.ueh.edu.vn/wp-content/uploads/2017/06/mis-770x385.jpg" alt="Hệ thống Thông tin Kinh doanh">
+      </a>
+      <div class="card-content">
+        <h3>
+          <a href="https://bit.ueh.edu.vn/nganh-he-thong-thong-tin-quan-ly" target="_blank">
+            Hệ thống Thông tin Kinh doanh
+          </a>
+        </h3>
+        <p>
+          Nhu cầu xã hội Hiện nay, ứng dụng công nghệ trong điều hành doanh nghiệp đang được các
+          nhà quản trị đặc biệt chú trọng nhằm nâng cao hiệu quả và năng lực cạnh tranh...
+        </p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
