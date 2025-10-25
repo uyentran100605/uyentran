@@ -46,29 +46,24 @@
   	}
 
   	img { width: 100%; height: auto; }
-    /* cho width tính luôn padding/border */
 #sectioncontent1, #asidecontent1 { box-sizing: border-box; }
 
-/* chia 2 cột bằng % để luôn vừa mọi màn hình */
 #sectioncontent1{
   float: left;
-  width: 62%;           /* cột trái */
-  min-width: 320px;     /* để không quá nhỏ */
-  max-width: none;      /* bỏ max cứng 600 */
+  width: 62%;          
+  min-width: 320px;     
+  max-width: none;    
 }
 
 #asidecontent1{
   float: left;
-  width: 36%;           /* cột phải */
+  width: 36%;          
   min-width: 260px;
-  max-width: none;      /* bỏ max cứng 400 */
+  max-width: none;      
 }
 
-/* ảnh không tràn khung */
 img{max-width:100%; height:auto; display:block;}
-/* body mặc định có margin 8px -> bỏ để khỏi hụt bề ngang */
 body{margin:0;}
-/* clear float an toàn cho container */
 #pagecontent::after{content:""; display:block; clear:both;}
 
 </style>
@@ -189,3 +184,4 @@ body{margin:0;}
 
 </body>
 </html>
+
