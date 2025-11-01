@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI face</title>
+    <style>
+        img{
+            width: 100px;
+            height: 100px;
+            border-radius: 40%;
+            margin-left: -50px;
+            
+        }
+        content:first-child{
+            margin-left: 50px;
+            margin-top: 10px;
+        }
+        img:hover{
+            transform: scale(1.5);
+        }
+        .wrap{
+            display:flex;
+            align-items: center;
+        }
+        .content{
+            background-color: lightgray;
+            position: relative;
+        }
+        div.at-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+	.at-item {
+		color: #3079ed; font-weight:bold; font-size:3em;
+		
+		animation-name: text-shadow-multicolor;
+		animation-duration: 2.2s;
+		animation-timing-function: ease;
+		animation-delay: 0s;
+		animation-iteration-count: infinite;
+		animation-direction: normal;
+		animation-fill-mode: none;
+			
+		/* shorthand
+		animation: text-shadow-multicolor 2.2s ease 0s infinite normal none;*/
+	}
+	@keyframes text-shadow-multicolor {
+			
+		0% {
+			text-shadow:0 0px 15px #f0f;
+		}
+		33% {
+			text-shadow:0 0px 15px #0ff;
+		}
+		66% {
+			text-shadow:0 0px 10px #0f0;
+		}
+		100% {
+			text-shadow:0 0px 10px #ff0;
+		}
+	}
+    </style>
+</head>
+<body>
+    <div class='at-container'>
+	    <div class='at-item' >Đại học UEH</div>
+    </div>
+    <div class="content">
+        <div class="avatar"></div>
+        <img src="img\ui1.jpg" alt="Thanh vien 1">
+        <img src="img\ui2.jpg" alt="Thanh vien 2">
+        <img src="img\ui3.jpg" alt="Thanh vien 3">
+    </div>
+</body>
+</html>
