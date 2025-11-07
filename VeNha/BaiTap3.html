@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <title>Animate.css – Hover Effects</title>
+
+    <!-- Thêm Animate.css từ CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <style>
+      .khoa {
+        display: inline-block;
+        background: #0b74da; /* xanh lúc bình thường */
+        color: #fff;
+        font-size: 20px; /* cỡ chữ lúc bình thường */
+        padding: 6px 10px;
+        transform-origin: center;
+        transition: background-color 300ms ease, font-size 300ms ease,
+          transform 300ms ease;
+      }
+
+      .khoa:hover {
+        background: #e11919; /* đỏ khi hover */
+        font-size: 50px; /* tăng cỡ chữ khi hover */
+        transform: rotateY(360deg) scale(1.2); /* xoay và phóng to */
+        /* Áp dụng Animate.css: class animate__bounceOut hoặc animate__flip */
+        animation: none; /* tạm bỏ animation mặc định */
+      }
+
+      /* Khi hover add class Animate.css qua JS hoặc dùng pseudo class :hover */
+      .khoa.hover animate {
+        /* ví dụ khi thêm class hover animate sẽ dùng animation từ Animate.css */
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .khoa {
+          transition: none;
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <span
+      class="khoa animate__animated animate__rubberBand"
+      onmouseover="this.classList.add('animate__bounce');"
+      onanimationend="this.classList.remove('animate__bounce');"
+    >
+      Khoa CNTTKD
+    </span>
+  </body>
+</html>

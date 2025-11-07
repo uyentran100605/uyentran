@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover Effect 7 - Modified</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+ 
+      body {
+        font-family: Arial, sans-serif;
+        padding: 50px;
+        background: #f0f0f0;
+      }
+ 
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+ 
+      .view {
+        width: 300px;
+        height: 200px;
+        margin: 10px;
+        float: left;
+        border: 10px solid #fff;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        box-shadow: 1px 1px 2px #e6e6e6;
+        cursor: default;
+        background: #fff;
+      }
+ 
+      .view .mask {
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+      }
+ 
+      .view img {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+ 
+      .view h2 {
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        font-size: 17px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.8);
+        margin: 20px 0 0 0;
+      }
+ 
+      .view p {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-size: 12px;
+        position: relative;
+        color: #fff;
+        padding: 10px 20px 20px;
+        text-align: center;
+      }
+ 
+      .view a.info {
+        display: inline-block;
+        text-decoration: none;
+        padding: 7px 14px;
+        background: #000;
+        color: #fff;
+        text-transform: uppercase;
+        box-shadow: 0 0 1px #000;
+      }
+ 
+      .view a.info:hover {
+        box-shadow: 0 0 5px #000;
+      }
+ 
+      /* Ví dụ 7 - Modified */
+      .view-seventh img {
+        /* Thay đổi: Hình ảnh xoay nhưng KHÔNG biến mất */
+        transition: all 0.5s ease-out;
+        opacity: 1;
+      }
+ 
+      .view-seventh .mask {
+        background-color: rgba(77, 44, 35, 0.5);
+        opacity: 0;
+        transition: all 0.3s ease-out;
+        /* Mask cũng xoay từ trên xuống */
+        transform: translateY(-200px) rotate(180deg);
+      }
+ 
+      .view-seventh h2 {
+        transform: translateY(-200px);
+        transition: all 0.2s ease-in-out;
+      }
+ 
+      .view-seventh p {
+        transform: translateY(-200px);
+        transition: all 0.2s ease-in-out;
+      }
+ 
+      .view-seventh a.info {
+        transform: translateY(-200px);
+        transition: all 0.2s ease-in-out;
+      }
+ 
+      /* Khi hover */
+      .view-seventh:hover img {
+        /* Thay đổi: Chỉ xoay 720 độ, KHÔNG scale(0) và KHÔNG opacity: 0 */
+        /* Sau khi hết hiệu ứng, hình vẫn hiển thị bình thường */
+        transform: rotate(720deg);
+      }
+ 
+      .view-seventh:hover .mask {
+        opacity: 1;
+        /* Thay đổi: Mask cũng xoay giống hình nền (720 độ) */
+        transform: translateY(0px) rotate(720deg);
+        transition-delay: 0.4s;
+      }
+ 
+      .view-seventh:hover h2 {
+        transform: translateY(0px);
+        transition-delay: 0.7s;
+      }
+ 
+      .view-seventh:hover p {
+        transform: translateY(0px);
+        transition-delay: 0.6s;
+      }
+ 
+      .view-seventh:hover a.info {
+        transform: translateY(0px);
+        transition-delay: 0.5s;
+      }
+ 
+      .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="text-align: center; margin-bottom: 30px">
+        Ví dụ 7 - Modifieds
+      <div class="clearfix">
+        <div class="view view-seventh">
+          <img
+            src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=300&h=200&fit=crop"
+            alt="Model 1"
+          />
+          <div class="mask">
+            <h2>Hover Style #1</h2>
+            <p>
+              Di chuột vào để xem hình xoay 720 độ. Sau khi hover xong, hình
+              người mẫu vẫn hiện!
+            </p>
+            <a href="#" class="info">Read More</a>
+          </div>
+        </div>
+ 
+        <div class="view view-seventh">
+          <img
+            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=200&fit=crop"
+            alt="Model 2"
+          />
+          <div class="mask">
+            <h2>Beautiful Model</h2>
+            <p>Mask và hình cùng xoay 720 độ</p>
+            <a href="#" class="info">Read More</a>
+          </div>
+        </div>
+ 
+        <div class="view view-seventh">
+          <img
+            src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=300&h=200&fit=crop"
+            alt="Model 3"
+          />
+          <div class="mask">
+            <h2>Fashion Style</h2>
+            <p>Hình ảnh không biến mất sau hover</p>
+            <a href="#" class="info">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

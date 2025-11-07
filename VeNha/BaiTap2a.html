@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover Effect 1 - Modified</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+ 
+      body {
+        font-family: Arial, sans-serif;
+        padding: 50px;
+        background: #f0f0f0;
+      }
+ 
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+ 
+      .view {
+        width: 300px;
+        height: 200px;
+        margin: 10px;
+        float: left;
+        border: 10px solid #fff;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        box-shadow: 1px 1px 2px #e6e6e6;
+        cursor: default;
+        background: #fff;
+      }
+ 
+      .view .mask {
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+      }
+ 
+      .view img {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+ 
+      .view h2 {
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        font-size: 17px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.8);
+        margin: 20px 0 0 0;
+      }
+ 
+      .view p {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-size: 12px;
+        position: relative;
+        color: #fff;
+        padding: 10px 20px 20px;
+        text-align: center;
+      }
+ 
+      .view a.info {
+        display: inline-block;
+        text-decoration: none;
+        padding: 7px 14px;
+        background: #000;
+        color: #fff;
+        text-transform: uppercase;
+        box-shadow: 0 0 1px #000;
+      }
+ 
+      .view a.info:hover {
+        box-shadow: 0 0 5px #000;
+      }
+ 
+      /* Ví dụ 1 - Modified */
+      .view-first img {
+        transition: all 0.2s linear;
+      }
+ 
+      .view-first .mask {
+        opacity: 0;
+        /* Thay đổi: Màu nền xanh nhạt thay vì cam */
+        background-color: rgba(135, 206, 250, 0.8);
+        /* Thay đổi: Bắt đầu từ bên trái (translateX -100%) */
+        transform: translateX(-100%);
+        transition: all 0.4s ease-in-out;
+      }
+ 
+      .view-first h2 {
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+      }
+ 
+      .view-first p {
+        transform: translateY(100px);
+        opacity: 0;
+        transition: all 0.2s linear;
+      }
+ 
+      .view-first a.info {
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+      }
+ 
+      .view-first:hover img {
+        transform: scale(1.1);
+      }
+ 
+      .view-first:hover .mask {
+        opacity: 1;
+        /* Thay đổi: Chạy từ trái sang phải */
+        transform: translateX(0);
+      }
+ 
+      .view-first:hover h2,
+      .view-first:hover p,
+      .view-first:hover a.info {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+      .view-first:hover p {
+        transition-delay: 0.1s;
+      } 
+      .view-first:hover a.info {
+        transition-delay: 0.2s;
+      } 
+      .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="text-align: center; margin-bottom: 30px">
+        Ví dụ 1 - Modified
+           <div class="clearfix">
+        <div class="view view-first">
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=300&h=200&fit=crop"
+            alt="Mountain"
+          />
+          <div class="mask">
+            <h2>Hover Style #1</h2>
+            <p>
+              Di chuột vào để xem hiệu ứng từ trái sang phải với màu xanh nhạt
+            </p>
+            <a href="#" class="info">Read More</a>
+          </div>
+        </div>
+        <div class="view view-first">
+          <img
+            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=300&h=200&fit=crop"
+            alt="Nature"
+          />
+          <div class="mask">
+            <h2>Beautiful Nature</h2>
+            <p>Khám phá vẻ đẹp thiên nhiên tuyệt vời</p>
+            <a href="#" class="info">Read More</a>
+          </div>
+        </div>
+        <div class="view view-first">
+          <img
+            src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=300&h=200&fit=crop"
+            alt="Forest"
+          />
+          <div class="mask">
+            <h2>Green Forest</h2>
+            <p>Rừng xanh mát mẻ và thư giãn</p>
+            <a href="#" class="info">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
