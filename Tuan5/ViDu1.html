@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo responsive</title>
+    <style>
+        .left, .right{
+            height: 400px;
+        }
+        .left{
+            background: blue;
+            float: left;
+            width: 70%;
+        }
+        .right{
+            background: red;
+            float: right;
+            width: 30%;
+        }
+        @media only screen and (max-width: 768px){
+            .left, .right{
+                width: 100%
+            }
+        }
+        @media only screen and (max-width: 480px)
+                            and (min-width: 320px){
+            .right{
+                display: none;
+            }
+        }
+        @media only print {
+            .left{
+                display: none;
+            }
+            .right{
+                width: 100%;
+            }
+        }
+        picture img{
+            width: 500px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <picture>
+        <source media="(min-width:960px)"
+                srcset="https://www.ueh.edu.vn/images/logo-header.png"> 
+        <source media="(min-width:480px)"
+                srcset="https://ctd.ueh.edu.vn/wp-content/uploads/2023/07/cropped-TV_trang_CTD.png"> 
+        <img alt="logo"src="https://bit.ueh.edu.vn/wp-content/uploads/2017/06/BIT_logo.png">
+</picture>
+    <div class="container">
+        <div class="left">
+            LEFT
+        </div>
+        <div class="right">
+            RIGHT
+        </div>
+    </div>
+</body>
+</html>
